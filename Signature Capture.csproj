@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>imgs\topazIcon.ico</ApplicationIcon>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <!-- If you need to reference non-NuGet third-party assemblies, include them here -->
+  <ItemGroup>
+    <Reference Include="SigPlusNET">
+      <HintPath>SigPlusNET.dll</HintPath>
+    </Reference>
+    <Content Include="imgs\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command='xcopy /Y /E /I "$(ProjectDir)imgs" "$(TargetDir)imgs\"' />
+  </Target>
+</Project>
