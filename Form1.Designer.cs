@@ -67,9 +67,9 @@ namespace topaz
             // 
             this.sigPlusNET1.BackColor = System.Drawing.Color.White;
             this.sigPlusNET1.ForeColor = System.Drawing.Color.Black;
-            this.sigPlusNET1.Location = new System.Drawing.Point(20, 0);
+            this.sigPlusNET1.Location = new System.Drawing.Point(-40, -50);
             this.sigPlusNET1.Name = "sigPlusNET1";
-            this.sigPlusNET1.Size = new System.Drawing.Size(320, 114);
+            this.sigPlusNET1.Size = new System.Drawing.Size(460, 190);
             this.sigPlusNET1.TabIndex = 0;
             this.sigPlusNET1.Text = "sigPlusNET1";
             this.sigPlusNET1.PenUp += new System.EventHandler(this.sigPlusNET1_PenUp);

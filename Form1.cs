@@ -29,7 +29,7 @@ namespace topaz
             sigPlusNET1.SetTranslateBitmapEnable(false);
 
             //Images sent to the background
-            sigPlusNET1.LCDSendGraphic(1, 2, -2, 0, sign);
+            sigPlusNET1.LCDSendGraphic(1, 2, 0, 0, sign);
             sigPlusNET1.LCDSendGraphic(1, 2, 199, 48, done);
             sigPlusNET1.LCDSendGraphic(1, 2, 196, 5, clear);
 
@@ -57,7 +57,7 @@ namespace topaz
             sigPlusNET1.SetLCDCaptureMode(1);
             sigPlusNET1.SetTabletState(0);
         }
-
+        
         private void sigPlusNET1_PenUp(object sender, EventArgs e)
         {
             if (sigPlusNET1.KeyPadQueryHotSpot(2) > 0) //If the CLEAR hotspot is tapped, then...
