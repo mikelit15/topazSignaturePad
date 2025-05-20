@@ -14,6 +14,7 @@ A simple Windows Forms application in C# for capturing signatures using a Topaz 
 6. [Directory Structure](#directory-structure)
 7. [Configuration & Assets](#configuration--assets)
 8. [Troubleshooting](#troubleshooting)
+9. [Gallery](#gallery)
 
 ---
 
@@ -30,8 +31,8 @@ A simple Windows Forms application in C# for capturing signatures using a Topaz 
 ## Prerequisites
 
 * **Operating System**: Windows 10 or later
-* **Framework**: .NET Framework 4.7.2 (or newer)
-* **IDE**: Visual Studio 2019 / 2022 or equivalent
+* **Framework**: .NET 9.x (e.g., 9.0 or newer)
+* **IDE**: Visual Studio Code or equivalent
 * **Hardware**: Topaz LCD signature pad (e.g., T-LBK460-HSB)
 * **Driver & SDK**:
   * Topaz signature pad driver installed (https://www.sigpluspro.com/sigplus.html)
@@ -163,4 +164,29 @@ SignatureCaptureApp/
 * **Incorrect Graphics Display**
 
   * Check that your BMP dimensions and hotspot coordinates align with your pad model’s LCD resolution.
+
+---
+
+## Gallery
+
+#### LCD Prompt
+
+![LCD Prompt](https://github.com/user-attachments/assets/932b8ac0-30ae-48d1-8b30-8a5ccd8747ab)
+
+
+*The Topaz pad displays instructions and “Clear” / “Done” hotspots.*
+
+#### PC Form Interface
+
+![PC Form Interface](https://github.com/user-attachments/assets/91815e13-9954-4f1a-b20e-ebe8a6ce13f3)
+
+*WinForms panel showing real-time ink strokes.*
+
+#### Saved Signature Preview
+
+![Saved Signature](https://github.com/user-attachments/assets/db34f842-899a-412c-b926-72f4406306b7)
+
+*Exported 2000×700 px PNG of the captured signature.*
+
+---
 
