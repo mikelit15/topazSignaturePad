@@ -8,13 +8,11 @@ A simple Windows Forms application in C# for capturing signatures using a Topaz 
 
 1. [Features](#features)
 2. [Prerequisites](#prerequisites)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Code Overview](#code-overview)
-6. [Directory Structure](#directory-structure)
-7. [Configuration & Assets](#configuration--assets)
-8. [Troubleshooting](#troubleshooting)
-9. [Gallery](#gallery)
+3. [Usage](#usage)
+4. [Code Overview](#code-overview)
+5. [Directory Structure](#directory-structure)
+6. [Configuration & Assets](#configuration--assets)
+7. [Gallery](#gallery)
 
 ---
 
@@ -24,7 +22,7 @@ A simple Windows Forms application in C# for capturing signatures using a Topaz 
 * **Signature Panel**: Hosts the pad’s drawing area within a WinForms panel so users see their strokes on the PC form.
 * **Save as PNG**: Captures the signature at high resolution (2000×700 px) and saves it to `signature.png` in the application folder.
 * **Status Feedback**: Shows prompts on both the pad’s LCD and via standard Windows MessageBoxes.
-* **Auto-Exit**: Exits automatically once a valid signature is saved.
+* **Auto-Exit**: Exits upon pressing the done button and a valid signature was done.
 
 ---
 
@@ -37,29 +35,6 @@ A simple Windows Forms application in C# for capturing signatures using a Topaz 
 * **Driver & SDK**:
   * Topaz signature pad driver installed (https://www.sigpluspro.com/sigplus.html)
   * Topaz SigPlus.NET SDK (`SigPlusNET.dll`) (https://www.topazsystems.com/sdks/sigplusnet.html)
-
----
-
-## Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/mikelit15/topazSignaturePad.git
-   cd topazSignaturePad
-   ```
-
-2. **Prepare SDK Reference**
-
-   * Copy `SigPlusNET.dll` into the project’s `libs/` directory.
-   * In Visual Studio, right-click **References** → **Add Reference…** → **Browse** → select `SigPlusNET.dll`.
-
-
-3. **Build the Solution**
-
-   * Open `SignatureCaptureApp.sln` in Visual Studio.
-   * Set target framework to **.NET Framework 4.7.2** (or higher).
-   * Build → **Build Solution**.
 
 ---
 
@@ -149,44 +124,20 @@ SignatureCaptureApp/
 
 ---
 
-## Troubleshooting
-
-* **DLL Load Errors**
-
-  * Ensure `SigPlusNET.dll` is copied to the application’s output directory and matches your OS architecture (x86 vs. x64).
-  * Install the Topaz pad driver from Topaz’s website.
-
-* **No Signature Captured**
-
-  * Verify the pad is in capture mode (indicator LED on).
-  * Make sure your pen strokes occur within the active window (`SetSigWindow` coordinates).
-
-* **Incorrect Graphics Display**
-
-  * Check that your BMP dimensions and hotspot coordinates align with your pad model’s LCD resolution.
-
----
-
 ## Gallery
 
 #### LCD Prompt
 
-![LCD Prompt](https://github.com/user-attachments/assets/932b8ac0-30ae-48d1-8b30-8a5ccd8747ab)
-
-
+![LCD Prompt](https://github.com/user-attachments/assets/32276775-fe2a-4526-ab59-7bdba87fa6e5)<br>
 *The Topaz pad displays instructions and “Clear” / “Done” hotspots.*
 
 #### PC Form Interface
 
-![PC Form Interface](https://github.com/user-attachments/assets/91815e13-9954-4f1a-b20e-ebe8a6ce13f3)
-
+![PC Form Interface](https://github.com/user-attachments/assets/91815e13-9954-4f1a-b20e-ebe8a6ce13f3)<br>
 *WinForms panel showing real-time ink strokes.*
 
 #### Saved Signature Preview
 
-![Saved Signature](https://github.com/user-attachments/assets/db34f842-899a-412c-b926-72f4406306b7)
-
-*Exported 2000×700 px PNG of the captured signature.*
-
----
+![Saved Signature](https://github.com/user-attachments/assets/80dd286e-8602-4563-a7cc-ee4d04d67ae8)<br>
+*Exported 2000×700px PNG of the captured signature.*
 
