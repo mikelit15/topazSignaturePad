@@ -40,8 +40,8 @@ namespace topaz
             sigPlusNET1.LCDRefresh(2, 0, 0, 240, 64); //Brings the background image already loaded into foreground
             sigPlusNET1.KeyPadAddHotSpot(2, 1, 191, 0, 55, 22); //For CLEAR button
             sigPlusNET1.KeyPadAddHotSpot(3, 1, 194, 45, 48, 22); //For DONE button
-            sigPlusNET1.LCDSetWindow(16, 16, 174, 44);
-            sigPlusNET1.SetSigWindow(1, 16, 16, 174, 44); //Sets the area where ink is permitted in the SigPlus object
+            sigPlusNET1.LCDSetWindow(17, 17, 174, 44);
+            sigPlusNET1.SetSigWindow(1, 17, 17, 174, 44); //Sets the area where ink is permitted in the SigPlus object
             sigPlusNET1.SetLCDCaptureMode(2);   //Sets mode so ink will not disappear after a few seconds
         }
 
