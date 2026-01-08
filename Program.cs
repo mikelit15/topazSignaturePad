@@ -1,4 +1,7 @@
-﻿
+﻿using System.Resources;
+
+[assembly: NeutralResourcesLanguage("en-US")]
+
 namespace topaz
 {
     static class Program
